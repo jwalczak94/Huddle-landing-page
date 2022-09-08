@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%)
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 8vw;
+  font-family: 'Open Sans', sans-serif;
+  background: url(./images/bg-mobile.svg) var(--Violet) no-repeat top left / contain;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+#main-header {
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+#main-header img {
+  /* display: inline-block; */
+  width: 40%;
+}
+
+#left-box img {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+#right-box h1 {
+  margin-bottom: 2.2rem;
+  padding: 0 10px;
+  font-size: 2.6rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+#right-box p {
+  margin-bottom: 2.2rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+#btn {
+  display: inline-block;
+  margin-bottom: 4rem;
+  padding: 1.2rem 8rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  text-decoration: none;
+  color: var(--Violet);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.60);
+}
+
+#footer {}
+
+
+.icon {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin: 0.6rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+}
