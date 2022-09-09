@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
 
-/* font-family: 'Open Sans', sans-serif;
-font-family: 'Poppins', sans-serif; */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +16,7 @@ html {
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Open Sans', sans-serif;
   background: url(./images/bg-mobile.svg) var(--Violet) no-repeat top left / cover;
   color: hsl(0, 0%, 100%);
@@ -96,7 +94,7 @@ body {
 @media (min-width: 1200px) {
 
   body {
-    background: url(./images//bg-desktop.svg) var(--Violet) no-repeat top left / cover;
+    background: url(./images//bg-desktop.svg) var(--Violet) no-repeat top left / contain;
   }
 
   .container {
@@ -106,6 +104,7 @@ body {
   }
 
   #main-header {
+    height: 20vh;
     text-align: left;
     margin: 0 auto;
     padding: 5rem 7rem 7.5rem 5rem;
@@ -117,16 +116,12 @@ body {
 
   #main-box {
     display: flex;
+    height: 70vh;
   }
 
   #image-box {
     flex-basis: 58%;
   }
-
-  /* #image-box img {
-    width: 100%;
-    margin-bottom: 4rem;
-  } */
 
   #text-box {
     flex-basis: 42%;
@@ -153,6 +148,10 @@ body {
   #btn:hover {
     background-color: var(--SoftMagenta);
     color: #fff;
+  }
+
+  #main-footer {
+    height: 10vh;
   }
 
   #main-footer .footer-content {
