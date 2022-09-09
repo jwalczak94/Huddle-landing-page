@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click](https://your-solution-url.com)
-- Live Site URL: [Click](https://your-live-site-url.com)
+- Solution URL: [Click](https://www.frontendmentor.io/solutions/responsive-landing-page-mobile-first-workflow-flexbox-UJcF1ptjjJ)
+- Live Site URL: [Click](https://jwalczak94.github.io/Huddle-landing-page/)
 
 ## My process
 
