@@ -1,165 +1,220 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+/* BASIC RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-:root {
-  --Violet: hsl(257, 40%, 49%);
-  --SoftMagenta: hsl(300, 69%, 71%)
-}
-
-html {
-  font-size: 10px;
+html,
+body {
+  min-height: 100%;
 }
 
 body {
-  min-height: 100vh;
-  font-family: 'Open Sans', sans-serif;
-  background: url(./images/bg-mobile.svg) var(--Violet) no-repeat top left / cover;
-  color: hsl(0, 0%, 100%);
-  text-align: center;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  font: inherit;
+  text-decoration: none;
+}
+
+p,
+h1 {
+  overflow-wrap: break-word;
+}
+
+/* COLORS VARIABLE */
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+  --Pink: hsl(322, 100%, 66%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(./images/bg-mobile.svg) var(--Violet) no-repeat top left / cover;
+  color: hsl(0, 0%, 100%);
+}
+
+/* POSITION */
 .container {
-  margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 2.3rem;
+  margin-inline: auto;
+  max-width: 37.5rem;
   max-width: 500px;
 }
 
-#main-header {
-  text-align: left;
-  padding: 4rem 3rem;
-}
-
-#main-header img {
-  width: 40%;
-}
-
-#image-box img {
-  width: 100%;
-  margin-bottom: 4rem;
-}
-
-#text-box h1 {
-  margin-bottom: 2.2rem;
-  padding: 0 10px;
-  font-size: 2.6rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-#text-box p {
-  margin-bottom: 2.2rem;
-  font-size: 1.6rem;
-  line-height: 3rem;
-}
-
-#btn {
-  display: inline-block;
-  margin-bottom: 4rem;
-  padding: 1.2rem 8rem;
-  border-radius: 2rem;
-  background-color: #fff;
-  text-decoration: none;
-  color: var(--Violet);
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.4rem;
-  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.60);
-}
-
-#main-footer .footer-content {
+.flex-center {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 2.2rem;
+  justify-content: center;
 }
 
-#main-footer .footer-content .fa-brands {
-  margin-right: 2rem;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  cursor: pointer;
-  font-size: 2rem;
+/* HEADER */
+.header-content {
+  text-align: left;
+  margin-top: 2.375rem;
+  margin-bottom: 4.375rem;
 }
 
-#main-footer .footer-content .fa-brands:last-child {
-  margin-right: 0;
+.logo {
+  width: 7.5rem;
 }
 
-@media (min-width: 1200px) {
+/* MAIN CONTENT */
+h2 {
+  font-size: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
+}
 
+p {
+  font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+  font-family: "Open Sans", sans-serif;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+  margin-bottom: 4rem;
+}
+
+.image-content {
+  margin-inline: auto;
+}
+
+.text-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* FOOTER */
+.footer-content {
+  gap: 0.625rem;
+  margin-bottom: 2.5rem;
+}
+
+/* BUTTONS */
+.icons {
+  height: 1.75rem;
+  width: 1.75rem;
+  border: 1px solid white;
+  border-radius: 100%;
+  color: white;
+  transform: 0.2s;
+}
+
+.icons:hover {
+  color: var(--Pink);
+  border-color: var(--Pink);
+  transform: translateY(1px);
+}
+
+.btn {
+  background-color: hsl(0, 0%, 100%);
+  color: var(--Violet);
+  font-size: clamp(0.75rem, 0.618rem + 0.5634vw, 1.125rem);
+  line-height: 2.5rem;
+  width: 12.5rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.27);
+  margin-top: 0.5rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--SoftMagenta);
+  color: hsl(0, 0%, 100%);
+}
+
+.sr-only:not(:focus):not(:active) {
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media (min-width: 1100px) {
   body {
-    background: url(./images//bg-desktop.svg) var(--Violet) no-repeat top left / contain;
+    background: url(./images//bg-desktop.svg) var(--Violet) no-repeat top left / cover;
   }
 
   .container {
-    margin: 0 auto;
-    padding: 0 7rem 0 5rem;
-    max-width: 1400px;
+    padding: 0 5rem;
+    max-width: 90rem;
   }
 
-  #main-header {
-    height: 20vh;
+  .header-content {
+    margin-top: 3.125rem;
+    margin-bottom: 6.25rem;
+  }
+
+  .logo {
+    width: 12.5rem;
+  }
+
+  .main-content {
+    flex-direction: row;
+    align-items: start;
+    margin-bottom: 1.56rem;
+  }
+
+  .text-content {
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 32.5rem;
     text-align: left;
-    margin: 0 auto;
-    padding: 5rem 7rem 7.5rem 5rem;
+    flex-basis: 43%;
   }
 
-  #main-header img {
-    width: 18%;
+  .image-content {
+    max-height: 493px;
   }
 
-  #main-box {
-    display: flex;
-    height: 70vh;
+  .btn {
+    border-radius: 1.75rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    margin-top: 0;
   }
 
-  #image-box {
-    flex-basis: 58%;
-  }
-
-  #text-box {
-    flex-basis: 42%;
-    margin-left: 5rem;
-    text-align: left;
-  }
-
-  #text-box h1 {
-    margin-bottom: 3rem;
-    padding: 5rem 6rem 0 0;
-    font-size: 3.8rem;
-  }
-
-  #text-box p {
-    font-size: 1.8rem;
-  }
-
-  #btn {
-    padding: 1.2rem 6rem;
-    font-size: 1.8rem;
-    border-radius: 4rem;
-  }
-
-  #btn:hover {
-    background-color: var(--SoftMagenta);
-    color: #fff;
-  }
-
-  #main-footer {
-    height: 10vh;
-  }
-
-  #main-footer .footer-content {
+  .footer-content {
+    gap: 1rem;
     justify-content: flex-end;
   }
 
-  #main-footer .footer-content .fa-brands:hover {
-    color: var(--SoftMagenta);
-    border-color: var(--SoftMagenta);
+  .icons {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .fa-brands {
+    transform: scale(1.2);
   }
 }
